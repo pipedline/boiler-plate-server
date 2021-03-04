@@ -1,0 +1,35 @@
+### Get all banners
+GET http://localhost:3000/banner
+Content-Type: application/json
+Accept: application/json
+
+### Create banner
+POST http://localhost:3000/banner
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "testName",
+  "title": "testTitle",
+  "description": "testDescription",
+  "imageUrl": "http://www.naver.com",
+  "orderNo": "1"
+}
+
+### Create banner
+PUT http://localhost:3000/banner/3
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "testName3",
+  "title": "testTitle3",
+  "description": "testDescription3",
+  "imageUrl": "http://www.naver.com3",
+  "orderNo": "3"
+}
+
+### Delete banner
+DELETE http://localhost:3000/banner/2
+Content-Type: application/json
+Accept: application/json
