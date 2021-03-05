@@ -1,4 +1,11 @@
-import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
+import {
+  Column,
+  CreateDateColumn,
+  DeleteDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 
 @Entity()
 export class Banner {
@@ -16,30 +23,30 @@ export class Banner {
   description: string;
 
   @Column({
-    name: 'image_url'
+    name: 'image_url',
   })
   imageUrl: string;
 
   @Column({
-    name: 'order_no'
+    name: 'order_no',
   })
   orderNo: number;
 
   @CreateDateColumn({
     name: 'first_create_dt',
-    type: 'timestamp'
+    type: 'timestamp',
   })
   firstCreateDt: Date;
 
   @UpdateDateColumn({
     name: 'last_update_dt',
-    type: 'timestamp'
+    type: 'timestamp',
   })
   lastUpdateDt: Date;
 
   @DeleteDateColumn({
     name: 'delete_dt',
-    type: 'timestamp'
+    type: 'timestamp',
   })
   deleteDt: Date;
 }

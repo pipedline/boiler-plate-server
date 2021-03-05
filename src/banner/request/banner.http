@@ -16,17 +16,17 @@ Accept: application/json
   "orderNo": "1"
 }
 
-### Create banner
-PUT http://localhost:3000/banner/3
+### Update banner
+PUT http://localhost:3000/banner/4
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "testName3",
-  "title": "testTitle3",
-  "description": "testDescription3",
-  "imageUrl": "http://www.naver.com3",
-  "orderNo": "3"
+  "name": "testName5",
+  "title": "testTitle5",
+  "description": "1testDescription5",
+  "imageUrl": "http://www.naver.com5",
+  "orderNo": "5"
 }
 
 ### Delete banner
