@@ -20,9 +20,6 @@ export class Product {
   price: number;
 
   @Column()
-  discountRate: number;
-
-  @Column()
   discountPrice: number;
 
   @Column({

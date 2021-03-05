@@ -2,3 +2,15 @@
 GET http://localhost:3000/product
 Content-Type: application/json
 Accept: application/json
+
+### Create product
+POST http://localhost:3000/product
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "테스트 제품",
+  "price": 50000,
+  "discountPrice": "30000",
+  "thumbnailUrl": ""
+}
