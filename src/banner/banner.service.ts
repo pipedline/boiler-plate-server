@@ -27,29 +27,21 @@ export class BannerService {
   create(createBannerDto: CreateBannerDto): Promise<Banner> {
     const newBanner = new Banner();
 
-    newBanner.name = createBannerDto.name;
-    newBanner.title = createBannerDto.title;
-    newBanner.description = createBannerDto.description;
-    newBanner.imageUrl = createBannerDto.imageUrl;
-    newBanner.orderNo = createBannerDto.orderNo;
+    Object.assign(newBanner, createBannerDto)
 
     return this.bannerRepository.save(newBanner);
   }
 
   async deleteById(id: number): Promise<UpdateResult> {
-    const foundBanner = await this.findOneById(id);
+    const deleteBanner = await this.findOneById(id);
 
-    return this.bannerRepository.softDelete(id);
+    return this.bannerRepository.softDelete(deleteBanner.id);
   }
 
   async updateById(id: number, createBannerDto: CreateBannerDto): Promise<Banner> {
     const foundBanner = await this.findOneById(id);
 
-    foundBanner.name = createBannerDto.name;
-    foundBanner.title = createBannerDto.title;
-    foundBanner.description = createBannerDto.description;
-    foundBanner.imageUrl = createBannerDto.imageUrl;
-    foundBanner.orderNo = createBannerDto.orderNo;
+    Object.assign(foundBanner, createBannerDto);
 
     return this.bannerRepository.save(foundBanner);
   }
